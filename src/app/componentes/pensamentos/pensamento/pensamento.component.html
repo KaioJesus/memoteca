@@ -1,0 +1,14 @@
+<div class="pensamento {{pensamento.modelo}} ff-roboto-mono" [ngClass]="larguraPensamento()">  <!-- ngClass -> diretiva para modificar a classe dependendo do estilo, por exemplo, nesse projeto, temos cards de dois tamanhos, se um card tiver uma citação grande, o tamanho dele vai ser maior, senão vai ser menor, e esse método larguraPensamento retorna justamente isso-->
+    <!-- interpolação dentro da classe -->
+    <img src="../../../../assets/{{pensamento.modelo}}.png" alt="">
+    <p class="conteudo">{{pensamento.conteudo}}</p>
+    <p class="autoria"><b>{{pensamento.autoria}}</b></p>
+    <div class="acoes">
+        <button class="botao-editar" routerLink="/pensamentos/editarPensamento/{{pensamento.id}}">
+            <img src="../../../../assets/icone-editar.png" alt="Ícone editar">
+        </button>
+        <button class="botao-excluir" routerLink="/pensamentos/excluirPensamento/{{pensamento.id}}">
+            <img src="../../../../assets/icone-excluir.png" alt="Ícone excluir">
+        </button>
+    </div>
+</div>

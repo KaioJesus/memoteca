@@ -1,0 +1,22 @@
+{
+  "pensamentos": [
+    {
+      "id": 1,
+      "conteudo": "Aprendi a criar um programa em Angular",
+      "autoria": "Curso angular",
+      "modelo": "modelo1"
+    },
+    {
+      "id": 3,
+      "conteudo": "Entender o que são diretivas",
+      "autoria": "Curso angular",
+      "modelo": "modelo2"
+    },
+    {
+      "conteudo": "Aprendi a utilizar rotas para a navegação de páginas dinâmicas",
+      "autoria": "Curso angular",
+      "modelo": "modelo3",
+      "id": 4
+    }
+  ]
+}

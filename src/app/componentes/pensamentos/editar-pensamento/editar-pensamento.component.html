@@ -1,0 +1,72 @@
+<section class="container editar-pensamentos ff-inter">
+    <header class="header">
+        <h2>Adicione um <br> pensamento novo: </h2>
+    </header>
+    <form action="">
+        <label for="pensamento">Pensamento</label>
+        <input type="area" class="input" id="pensamento" name="pensamento" placeholder="Digite o pensamento" [(ngModel)]="pensamento.conteudo">
+        <!-- ngModel -> vai mudar simultaneamente o valor do card enquanto escreve no input, pos o pensamento.conteudo está na tag e aqui -->
+    </form>
+    <form action="">
+        <label for="autoria">Autoria ou fonte</label>
+        <input type="text" class="input" id="autoria" name="autoria" placeholder="Digite a autoria ou fonte" [(ngModel)]="pensamento.autoria" >
+        <!-- [value] -> property binding -> associando o atributo html ao objeto do typescript -->
+        <label for="modelo">Selecione o modelo do card:</label>
+        <div class="container-radio">
+            <div class="radio-modelo">
+                <label for="modelo1">
+                    <input type="radio" id="modelo1" value="modelo1" name="modelo-card" [(ngModel)]="pensamento.modelo">
+                    <div class="custom-radio">
+                        <span></span>
+                    </div>
+                    <span>Modelo 1</span>
+                </label>
+                Prévia
+                <div class="modelo modelo1 ff-roboto-mono">
+                    <img src="../../../../assets/modelo1.png" alt="Aspas azuis">
+                    <p class="conteudo">{{pensamento.conteudo}}</p>
+                    <!-- property binding com interpolation -->
+                    <p class="autoria"><b>{{pensamento.autoria}}</b></p>
+                </div>
+            </div>
+            <div class="radio-modelo">
+                <label for="modelo2">
+                    <input type="radio" id="modelo2" value="modelo2" name="modelo-card" [(ngModel)]="pensamento.modelo">
+                    <div class="custom-radio">
+                        <span></span>
+                    </div>
+                    <span>Modelo 2</span>
+                </label>
+                Prévia
+                <div class="modelo modelo2 ff-roboto-mono">
+                    <img src="../../../../assets/modelo2.png" alt="Aspas azuis-clara">
+                    <p class="conteudo">{{pensamento.conteudo}}</p>
+                    <!-- property binding com interpolation -->
+                    <p class="autoria"><b>{{pensamento.autoria}}</b></p>
+                </div>
+            </div>
+            <div class="radio-modelo">
+                <label for="modelo3">
+                    <input type="radio" id="modelo3" value="modelo3" name="modelo-card" [(ngModel)]="pensamento.modelo">
+                    <div class="custom-radio">
+                        <span></span>
+                    </div>
+                    <span>Modelo 3</span>
+                </label>
+                Prévia
+                <div class="modelo modelo3 ff-roboto-mono">
+                    <img src="../../../../assets/modelo3.png" alt="Aspas verdes">
+                    <p class="conteudo">{{pensamento.conteudo}}</p>
+                    <!-- property binding com interpolation -->
+                    <!-- interpolation é quando você passa o valor direto na tag -->
+                    <p class="autoria"><b>{{pensamento.autoria}}</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="acoes">
+            <button (click)="editarPensamento()" class="botao">Salvar</button>
+            <!-- event binding -> evento de ações no angular -> (evento)="método()", do html para o componente typescript -->
+            <button (click)="cancelar()" class="botao">Cancelar</button>
+        </div>
+    </form>
+</section>
